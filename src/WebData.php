@@ -104,6 +104,10 @@ class WebData{
 	}
 	static $conversionRates = array();
 	static function getConversionRates(){
+
+		#@TODO No  longer works, use yahoo
+		# query builder: https://developer.yahoo.com/yql/console/?q=show%20tables&env=store://datatables.org/alltableswithkeys#h=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20%28%22USDMXN%22%2C%20%22USDCHF%22%29
+		# example query: https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDMXN%22%2C%20%22USDCHF%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
 		$types = array('EUR','GBP');
 		foreach($types as $type){
 			$json = @file_get_contents('http://www.google.com/ig/calculator?hl=en&q=1'.$type.'=?USD');

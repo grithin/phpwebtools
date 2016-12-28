@@ -79,6 +79,7 @@ Read the inline code comments
 list($dom, $xpath) = DomTools::loadHtml($response->body);
 ```
 
+
 ## WebData
 
 Various web data methods including ones used to fulfill ASP validations by parsing responses and setting post parameters.
